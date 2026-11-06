@@ -52,10 +52,23 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // අලුතෙන් එකතු කරපු STOP BUTTON එක
+        val btnStop = Button(this).apply {
+            text = "STOP ATTACK"
+            setBackgroundColor(android.graphics.Color.parseColor("#333333")) // තද අළු පාට
+            setTextColor(android.graphics.Color.RED)
+            setPadding(0, 20, 0, 20)
+            setOnClickListener {
+                // මේක ඔබපු ගමන් වැඩේ නවතිනවා
+                ArchonService.stopAttack()
+            }
+        }
+
         layout.addView(title)
         layout.addView(status)
         layout.addView(btnEnable)
         layout.addView(btnStart)
+        layout.addView(btnStop) // Button එක Screen එකට එකතු කිරීම
         
         setContentView(layout)
     }
