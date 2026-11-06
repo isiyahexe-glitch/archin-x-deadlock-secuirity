@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -19,19 +18,12 @@ class MainActivity : AppCompatActivity() {
             setPadding(50, 100, 50, 50)
         }
 
-        val logo = ImageView(this).apply {
-            setImageResource(R.drawable.archon_x_logo)
-            layoutParams = LinearLayout.LayoutParams(800, 800).apply {
-                gravity = android.view.Gravity.CENTER_HORIZONTAL
-            }
-        }
-
         val title = TextView(this).apply {
             text = "ARCHON_X"
             setTextColor(android.graphics.Color.RED)
-            textSize = 40f
+            textSize = 50f
             gravity = android.view.Gravity.CENTER
-            setPadding(0, 20, 0, 20)
+            setPadding(0, 50, 0, 20)
         }
 
         val status = TextView(this).apply {
@@ -39,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             setTextColor(android.graphics.Color.GRAY)
             textSize = 16f
             gravity = android.view.Gravity.CENTER
-            setPadding(0, 0, 0, 50)
+            setPadding(0, 0, 0, 100)
         }
 
         val btnEnable = Button(this).apply {
@@ -60,7 +52,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        layout.addView(logo)
         layout.addView(title)
         layout.addView(status)
         layout.addView(btnEnable)
