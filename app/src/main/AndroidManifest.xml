@@ -4,7 +4,6 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/archon_x_logo"
         android:label="ARCHON_X"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         
